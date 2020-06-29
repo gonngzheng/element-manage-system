@@ -24,7 +24,8 @@
                             >
                                 <template slot="title">{{subItem.title}}</template>
                                 <el-menu-item 
-                                    v-for="threeItem in subItem.subs" 
+                                    v-for="threeItem in subItem.subs"
+                                    :index="threeItem.index" 
                                     :key="threeItem.index"
                                 > 
                                     {{threeItem.title}}
@@ -59,22 +60,24 @@
                 collapse: false,
                 items:[
                     {
-                        icon: 'el-icon-gz-home',
+                        icon: 'el-icon-lx-home',
+                        // icon:'iconfont el-icon-lxicon-test1',
                         index: 'dashboard',
                         title: '系统首页'
                     },
                     {
-                        icon: 'el-icon-gz-cascades',
+                        icon: 'el-icon-lx-cascades',
+                        // icon: 'iconfont el-icon-lxicon-test3',
                         index: 'table',
                         title: '基础表格'
                     },
                     {
-                        icon: 'el-icon-gz-copy',
+                        icon: 'el-icon-lx-copy',
                         index: 'tabs',
                         title: 'tab选项卡'
                     },
                     {
-                        icon: 'el-icon-gz-calendar',
+                        icon: 'el-icon-lx-calendar',
                         index: '3',
                         title: '表单相关',
                         subs:[
@@ -103,7 +106,7 @@
                         ]
                     },
                     {
-                        icon: 'el-icon-gz-emoji',
+                        icon: 'el-icon-lx-emoji',
                         index: 'icon',
                         title: '自定义图标'
                     },
@@ -128,12 +131,12 @@
                         ]
                     },
                     {
-                        icon: 'el-icon-gz-global',
+                        icon: 'el-icon-lx-global',
                         index: 'i18n',
                         title: '国际化功能'
                     },
                     {
-                        icon: 'el-ion-gz-warn',
+                        icon: 'el-icon-lx-warn',
                         index: '7',
                         title: '错误处理',
                         subs: [
@@ -148,7 +151,7 @@
                         ]
                     },
                     {
-                        icon: 'el-icon-gz-redpacket_fill',
+                        icon: 'el-icon-lx-redpacket_fill',
                         index: 'danate',
                         title: '支持作者'
                     }
@@ -171,3 +174,22 @@
 
     }
 </script>
+<style scoped>
+    .sidebar{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        bottom: 0;
+        overflow-y: scroll;
+    }
+    .sidebar::-webkit-scrollbar {
+        width: 0;
+    }
+    .sidebar-el-menu:not(.el-menu--collapse) {
+        width: 250px;
+    }
+    .sidebar > ul {
+        height: 100%;
+    }
+</style>
