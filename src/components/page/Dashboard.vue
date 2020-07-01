@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>Dashboard</h1>
+        <h1>系统首页</h1>
     </div>
 </tempalte>
