@@ -20,6 +20,10 @@ export default new Router({
             meta: { title: '自述文件'},
             children: [
                 {
+                    path: 'demo1',
+                    component:()=> import('../components/demo/demo1')
+                },
+                {
                     path:'/dashboard',
                     component:()=>import('../components/page/Dashboard'),
                     meta:{ title:'系统首页'}
