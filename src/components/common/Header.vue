@@ -52,7 +52,7 @@ import bus from './bus';
     export default{
         data(){
             return{
-               collapse: false,
+               collapse: true,
                fullscreen: false,
                message: 2,
                name: 'gongzheng'

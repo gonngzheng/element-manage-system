@@ -104,6 +104,7 @@
 <script>
 import { fetchData } from '../../api';
 export default{
+    name: 'basetable',
     data() {
         return {
             query: {
@@ -221,8 +222,8 @@ export default{
     .table-td-thumb {
         display: block;
         margin: auto;
-        width: 100px;
-        height: 100px;
+        width: 40px;
+        height: 40px;
     }
 
 </style>

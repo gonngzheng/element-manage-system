@@ -37,9 +37,40 @@ export default new Router({
                     path: '/tabs',
                     component: ()=>import('../components/page/Tabs'),
                     meta: { title: 'tab选项卡'}
+                },
+                {
+                    path: '/form',
+                    component: ()=> import('../components/page/BaseForm'),
+                    meta: { title: '基本表单' }
+                },
+                {
+                    //国际化组件
+                    path: '/i18n',
+                    component: ()=> import('../components/page/I18n.vue'),
+                    meta: {title: '国际化' }
+                },
+                {
+                    // vue-schart组件
+                    path: '/charts',
+                    component: ()=> import('../components/page/BaseCharts'),
+                    meta: { title: 'schart图表' }
+                },
+                {
+                    path: '/icon',
+                    component: ()=>import('../components/page/Icon.vue'),
+                    meta: { title: '自定义图标' }
+                },
+                {
+                    path: '/404',
+                    component: ()=>import('../components/page/404')
                 }
+
             ]
         },
+        {
+            path: '*',
+            redirect: '/404'
+        }
 
     ]
 })
