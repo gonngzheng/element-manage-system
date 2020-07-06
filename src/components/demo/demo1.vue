@@ -2,6 +2,8 @@
     <div class="12">
         <el-table
             :data="tableData"
+            row-key="id"
+            :tree-props="{children: 'children', hasChildren: 'hasChildren'}"
             style="width: 100%">
             <el-table-column
                 prop="date"
@@ -70,7 +72,7 @@ export default{
                 {
                     date: "2020-07-01",
                     name: "王小虎",
-                    adress: "浙江省杭州市上城区望潮路"
+                    adress: "浙江省杭州市上城区望潮路",
                 },
                 {
                     date: "2020-07-01",
@@ -94,18 +96,18 @@ export default{
           date: '2016-05-01',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1519 弄',
-          hasChildren: true
-        //   children: [{
-        //       id: 31,
-        //       date: '2016-05-01',
-        //       name: '王小虎',
-        //       address: '上海市普陀区金沙江路 1519 弄'
-        //     }, {
-        //       id: 32,
-        //       date: '2016-05-01',
-        //       name: '王小虎',
-        //       address: '上海市普陀区金沙江路 1519 弄'
-        //   }]
+          hasChildren: true,
+          children: [{
+              id: 31,
+              date: '2016-05-01',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1519 弄'
+            }, {
+              id: 32,
+              date: '2016-05-01',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1519 弄'
+          }]
         }, {
           id: 4,
           date: '2016-05-03',

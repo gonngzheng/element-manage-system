@@ -44,6 +44,12 @@ export default new Router({
                     meta: { title: '基本表单' }
                 },
                 {
+                    //图片上传组件
+                    path: '/upload',
+                    component: ()=> import('../components/page/Upload.vue'),
+                    meta: { title: '文件上传' }
+                },
+                {
                     //国际化组件
                     path: '/i18n',
                     component: ()=> import('../components/page/I18n.vue'),
