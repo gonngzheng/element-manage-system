@@ -62,6 +62,12 @@ export default new Router({
                     meta: { title: 'schart图表' }
                 },
                 {
+                    //拖拽Dialog组件
+                    path: '/dialog',
+                    component: ()=> import('../components/page/DragDialog'),
+                    meta: { title: '拖拽弹框' }
+                },
+                {
                     path: '/icon',
                     component: ()=>import('../components/page/Icon.vue'),
                     meta: { title: '自定义图标' }
