@@ -44,6 +44,18 @@ export default new Router({
                     meta: { title: '基本表单' }
                 },
                 {
+                    // 富文本编辑器组件
+                    path: '/editor',
+                    component: () => import('../components/page/VueEditor.vue'),
+                    meta: { title: '富文本编辑器' }
+                },
+                {
+                    // markdown组件
+                    path: '/markdown',
+                    component: () => import('../components/page/Markdown.vue'),
+                    meta: { title: 'markdown编辑器' }
+                },
+                {
                     //图片上传组件
                     path: '/upload',
                     component: ()=> import('../components/page/Upload.vue'),
