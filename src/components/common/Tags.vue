@@ -63,7 +63,6 @@ export default {
             const isExist = this.tagsList.some(item => {
                 return item.path === route.fullPath;
             })
-            console.log(isExist,'isExist')
             if(!isExist){
                 if(this.tagsList.length >= 8){
                     this.tagList.shift();

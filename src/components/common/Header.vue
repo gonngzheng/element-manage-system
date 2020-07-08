@@ -38,7 +38,9 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item command="respository">项目仓库</el-dropdown-item>
+                        <a href="https://github.com/gonngzheng/element-manage-system" target="_blank">
+                            <el-dropdown-item command="respository">项目仓库</el-dropdown-item>
+                        </a>
                         <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
@@ -60,7 +62,7 @@ import bus from './bus';
         },
         computed:{
             username(){
-                let username = localStorage.getItem('ms_username');
+                let username = sessionStorage.getItem('ms_username');
                 return username ? username : this.name
             }
         },
@@ -112,7 +114,10 @@ import bus from './bus';
                 this.fullscreen = !this.fullscreen;
             },
             handleCommand(command){
-                console.log(command,'command')
+                if(command == 'loginout'){
+                    sessionStorage.removeItem('ms_username');
+                    this.$router.push('/login')
+                }
             }
         }
         

@@ -62,10 +62,22 @@ export default new Router({
                     meta: { title: 'schart图表' }
                 },
                 {
+                    //拖拽列表组件
+                    path: '/drag',
+                    component: ()=> import('../components/page/DragList.vue'),
+                    meta: { title: '拖拽列表' }
+                },
+                {
                     //拖拽Dialog组件
                     path: '/dialog',
                     component: ()=> import('../components/page/DragDialog'),
                     meta: { title: '拖拽弹框' }
+                },
+                {
+                    // 权限页面
+                    path: '/permission',
+                    component: () => import('../components/page/Permission.vue'),
+                    meta: { title: '权限测试', permission: true }
                 },
                 {
                     path: '/icon',
@@ -73,11 +85,21 @@ export default new Router({
                     meta: { title: '自定义图标' }
                 },
                 {
+                    path: '/403',
+                    component: () => import('../components/page/403.vue'),
+                    meta: { title: '403' }
+                },
+                {
                     path: '/404',
                     component: ()=>import('../components/page/404')
                 }
 
             ]
+        },
+        {
+            path: '/login',
+            component: () => import('../components/page/Login.vue'),
+            meta: { title: '登录' }
         },
         {
             path: '*',
